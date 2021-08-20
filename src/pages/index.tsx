@@ -5,6 +5,8 @@ import { getPrismicClient } from '../services/prismic';
 import commonStyles from '../styles/common.module.scss';
 import styles from './home.module.scss';
 
+import { Header } from '../components/Header/index';
+
 interface Post {
   uid?: string;
   first_publication_date: string | null;
@@ -24,9 +26,17 @@ interface HomeProps {
   postsPagination: PostPagination;
 }
 
-// export default function Home() {
-//   // TODO
-// }
+export default function Home(): JSX.Element {
+  return (
+    <div className={styles.container}>
+      <Header />
+      <div className={styles.content}>
+        <h1>Como utilizar os hooks</h1>
+        <p>Pensando em sincronização em vez de ciclos de vida.</p>
+      </div>
+    </div>
+  );
+}
 
 // export const getStaticProps = async () => {
 //   // const prismic = getPrismicClient();
