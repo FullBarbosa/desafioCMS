@@ -1,18 +1,53 @@
 // TODO
+
 .container {
   max-width: 800px;
-  margin: 0 auto;
+  margin: 2rem auto;
   padding: 0 2rem;
-  height: calc(100vh - 45rem);
+  height: 100vh;
 
   display: flex;
   flex-direction: column;
-
-  justify-content: center;
 }
 
 .content {
   margin-top: 2rem;
+
+  h1 {
+    color: var(--Heading);
+    transition: 0.2s;
+
+    &:hover {
+      color: var(--Info);
+    }
+  }
+
+  p {
+    color: var(--Info);
+    margin-top: 0.5rem;
+  }
+
+  div {
+    margin-top: 1rem;
+    gap: 0.5rem;
+
+    display: flex;
+
+    color: var(--Info);
+    span {
+      margin-right: 2rem;
+    }
+  }
+}
+
+.morePosts {
+  margin-top: 5rem;
+  span {
+    font-weight: bold;
+    border: none;
+    color: var(--Highlight);
+    cursor: pointer;
+  }
 }
 
 // .hero {

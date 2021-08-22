@@ -9,7 +9,7 @@
   --Heading: #f8f8f8;
   --Background: #1a1d23;
   --Info: #bbbbbb;
-  --Body: D7D7D7;
+  --Body: #d7d7d7;
 }
 
 @media (max-width: 1080px) {
@@ -34,19 +34,6 @@ button {
 
 body {
   background: var(--Background);
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: var(--Heading);
-}
-
-p {
-  color: var(--info);
 }
 
 button {

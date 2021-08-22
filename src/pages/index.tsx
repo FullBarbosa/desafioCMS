@@ -1,5 +1,6 @@
 import { GetStaticProps } from 'next';
 
+import { FiCalendar, FiUser } from 'react-icons/fi';
 import { getPrismicClient } from '../services/prismic';
 
 import commonStyles from '../styles/common.module.scss';
@@ -28,13 +29,57 @@ interface HomeProps {
 
 export default function Home(): JSX.Element {
   return (
-    <div className={styles.container}>
+    <>
       <Header />
-      <div className={styles.content}>
-        <h1>Como utilizar os hooks</h1>
-        <p>Pensando em sincronização em vez de ciclos de vida.</p>
+
+      <div className={styles.container}>
+        <div className={styles.content}>
+          <a href="/post/1">
+            <h1>Como utilizar os hooks</h1>
+          </a>
+          <p>Pensando em sincronização em vez de ciclos de vida.</p>
+          <div>
+            <FiCalendar />
+            <span>15 Mar 2021</span>
+
+            <FiUser />
+            <span>Danilo vieira</span>
+          </div>
+        </div>
+
+        <div className={styles.content}>
+          <a href="/post/2">
+            <h1>Como utilizar os hooks</h1>
+          </a>
+          <p>Pensando em sincronização em vez de ciclos de vida.</p>
+          <div>
+            <FiCalendar />
+            <span>ola mundo</span>
+
+            <FiUser />
+            <span>Danilo vieira</span>
+          </div>
+        </div>
+
+        <div className={styles.content}>
+          <a href="/post/3">
+            <h1>Como utilizar os hooks</h1>
+          </a>
+          <p>Pensando em sincronização em vez de ciclos de vida.</p>
+          <div>
+            <FiCalendar />
+            <span>ola mundo</span>
+
+            <FiUser />
+            <span>Danilo vieira</span>
+          </div>
+        </div>
+
+        <div className={styles.morePosts}>
+          <span>Carregar mais posts</span>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
