@@ -1,6 +1,7 @@
 import { GetStaticProps } from 'next';
 
 import { FiCalendar, FiUser } from 'react-icons/fi';
+import Prismic from '@prismicio/client';
 import { getPrismicClient } from '../services/prismic';
 
 import commonStyles from '../styles/common.module.scss';
@@ -17,7 +18,6 @@ interface Post {
     author: string;
   };
 }
-
 interface PostPagination {
   next_page: string;
   results: Post[];
@@ -83,9 +83,17 @@ export default function Home(): JSX.Element {
   );
 }
 
-// export const getStaticProps = async () => {
-//   // const prismic = getPrismicClient();
-//   // const postsResponse = await prismic.query(TODO);
-
-//   // TODO
-// };
+export const getStaticProps: GetStaticProps = async () => {
+  const prismic = getPrismicClient();
+  const postsResponse = await prismic.query(
+    [Prismic.predicates.at('document.type', 'publication')],
+    {
+      fetch: ['publication.title', 'publication.content'],
+      pageSize: 100,
+    }
+  );
+  console.log(JSON.stringify(postsResponse, null, 2));
+  return {
+    props: {},
+  };
+};
