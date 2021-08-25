@@ -1,15 +1,21 @@
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 :root {
-  --Highlight: #fe59b0;
-  --Heading: #f8f8f8;
-  --Background: #1a1d23;
-  --Info: #bbbbbb;
-  --Body: #d7d7d7;
+  --highlight: #ff57b2;
+  --heading: #f8f8f8;
+  --background: #1a1d23;
+  --info: #bbbbbb;
+  --body: #d7d7d7;
+  --border: #282c34;
+}
+
+body {
+  background: var(--background);
+  color: var(--body);
 }
 
 @media (max-width: 1080px) {
@@ -27,13 +33,9 @@
 body,
 input,
 textarea,
-select,
-button {
-  font: 400 1rem 'Roboto', sans-serif;
-}
-
-body {
-  background: var(--Background);
+button,
+select {
+  font: 400 1rem 'Inter', sans-serif;
 }
 
 button {

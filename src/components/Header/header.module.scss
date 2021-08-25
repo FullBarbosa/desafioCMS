@@ -1,10 +1,7 @@
-// TODO
-
-.headerContainer {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 0 2rem;
-
+.postHeader {
+  height: 6rem;
+  max-width: 700px;
+  margin: 0 auto;
   display: flex;
-  justify-content: start;
+  align-items: center;
 }
