@@ -16,6 +16,11 @@ export default class _document extends Document {
         <body>
           <Main />
           <NextScript />
+          <script
+            async
+            defer
+            src="https://static.cdn.prismic.io/prismic.js?new=true&repo=desafiorocketcms"
+          />
         </body>
       </Html>
     );
